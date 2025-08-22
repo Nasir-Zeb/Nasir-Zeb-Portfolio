@@ -7,11 +7,27 @@ body {
   font-family: 'Inter', sans-serif;
   background: linear-gradient(to bottom, #ffffff 50%, #f3f4f6 50%);
   color: #111827;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Watermark logo background */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background: url("assets/nz-logo.png") no-repeat center;
+  background-size: 300px;
+  opacity: 0.08;
+  width: 300px;
+  height: 300px;
+  z-index: -1;
 }
 
 /* Navbar fix */
 nav {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #e5e7eb;
   display: flex;
@@ -20,10 +36,10 @@ nav {
   padding: 0.5rem 2rem;
 }
 
-/* Logo alignment */
+/* Logo alignment in navbar */
 nav img {
   height: 40px;
-  width: 40px;
+  width: auto;
   object-fit: contain;
 }
 
@@ -34,15 +50,6 @@ nav span {
   margin-left: 8px;
 }
 
-/* Projects section clean look */
+/* Projects section */
 #projects {
   padding: 4rem 2rem;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-#projects h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
