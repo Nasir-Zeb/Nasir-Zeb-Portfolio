@@ -1,19 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* index.css or App.css */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Global Styles */
+/* Reset + base styles */
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(to bottom right, #4c1d95, #1e3a8a, #111827); /* creative gradient */
-  color: white;
+  background: linear-gradient(to bottom, #ffffff 50%, #f3f4f6 50%);
+  color: #111827;
 }
 
-/* Center the app */
-#root {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Navbar fix */
+nav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+/* Logo alignment */
+nav img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+/* Bold your name */
+nav span {
+  font-weight: 700;
+  color: #1f2937;
+  margin-left: 8px;
+}
+
+/* Projects section clean look */
+#projects {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
